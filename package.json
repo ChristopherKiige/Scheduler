@@ -1,0 +1,24 @@
+{
+  "name": "cadence",
+  "productName": "Cadence",
+  "version": "0.1.0",
+  "description": "Personal weekly planner that schedules your goals around your life, scores your week, and nudges you with notifications.",
+  "main": "main.js",
+  "author": "Christopher",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "me.cadence.planner",
+    "productName": "Cadence",
+    "files": ["main.js", "preload.js", "ai.js", "src/**", "assets/**"],
+    "win": { "target": "nsis", "icon": "assets/icon.ico" },
+    "nsis": { "oneClick": true, "createDesktopShortcut": true }
+  }
+}

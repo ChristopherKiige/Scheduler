@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:" />
+  <title>Cadence</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="side">
+    <div class="brand"><span class="logo">◐</span> Cadence</div>
+
+    <section class="card score-card">
+      <div class="score-top">
+        <div class="cat-list" id="catList"></div>
+        <div class="ring-wrap"><svg id="ring" viewBox="0 0 120 120"></svg>
+          <div class="ring-center"><div class="big" id="ringDone">0</div><div class="small" id="ringTotal">/0</div><div class="small">Done</div></div>
+        </div>
+      </div>
+      <div class="pace" id="pace"></div>
+      <div class="week-pill" id="weekPill">📅 This week</div>
+      <div class="icon-row">
+        <button class="icon-btn" id="btnShuffle" title="Reshuffle the rest of the week (re-place missed sessions)"></button>
+        <button class="icon-btn" id="btnRefresh" title="Reload"></button>
+        <button class="icon-btn" id="btnClear" title="Clear this week's check-offs"></button>
+        <button class="icon-btn" id="btnHelp" title="How it works"></button>
+        <button class="icon-btn" id="btnSettings" title="Settings"></button>
+      </div>
+      <div class="history" id="history"></div>
+    </section>
+
+    <section class="card tell">
+      <div class="card-title">Tell me what you want to do</div>
+      <textarea id="tellInput" rows="2" placeholder="e.g. “learn guitar 2h a week” or “Wayfarer part 2 due Thursday”"></textarea>
+      <div class="tell-row"><span class="muted" id="aiLabel"></span><button class="btn primary" id="tellBtn">Add to plan</button></div>
+      <div class="tell-reply" id="tellReply"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">Goals this week <button class="link-btn" id="addGoal">+ Add</button></div>
+      <div id="goalList"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-title">Deadlines <button class="link-btn" id="addDeadline">+ Add</button></div>
+      <div id="deadlineList"></div>
+    </section>
+  </aside>
+
+  <main class="main">
+    <header class="top">
+      <div class="nav">
+        <button class="btn ghost" id="prevWeek">‹</button>
+        <button class="btn ghost" id="todayBtn">Today</button>
+        <button class="btn ghost" id="nextWeek">›</button>
+        <h1 id="weekTitle"></h1>
+      </div>
+      <div class="top-right">
+        <span class="warn" id="unplaced"></span>
+        <button class="btn" id="addEvent">+ One-off event</button>
+      </div>
+    </header>
+    <div class="grid-wrap" id="gridWrap">
+      <div class="grid" id="grid"></div>
+    </div>
+  </main>
+
+  <div class="overlay hidden" id="overlay"><div class="modal" id="modal"></div></div>
+  <div class="popover hidden" id="popover"></div>
+  <div class="toast hidden" id="toast"></div>
+
+  <script src="planner.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
