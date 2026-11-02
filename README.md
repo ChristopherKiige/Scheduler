@@ -27,9 +27,9 @@ Without AI, "X hours a week" phrases still get turned into goals.
 
 | Fixed | When |
 |---|---|
-| Bravella (work) | Mon–Fri 9:00–5:00 |
-| Mobile Devices lecture | Mon & Thu 8:00–9:30 pm |
-| Mobile Devices lab | Tue 5:00–6:30 pm |
+| Work | Mon–Fri 9:00–5:00 |
+| Lectures | Mon & Thu 8:00–9:30 pm |
+| Lab | Tue 5:00–6:30 pm |
 | Gym (scored ★) | Mon–Fri 11:00 pm–midnight |
 
 Protected free time: dinner daily, Friday night, Saturday evening.
